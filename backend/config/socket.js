@@ -31,7 +31,7 @@ export function getReceiverSocketId ( userId ){
 }
 
 io.on("connection", (socket) => {
-    console.log("A user connected,", socket.user.userName)
+    console.log("A user connected:", socket.user.userName)
 
     const userId = socket.userId
     if (!userId) return;

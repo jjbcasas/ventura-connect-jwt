@@ -39,7 +39,7 @@ const Post = ({ user, post ,comments, likePost, unlikePost, addComment, deletePo
                     {/* <!-- for follow and unfollow button --> */}
                     {/* <!-- show the follow/unfollow button when its not the users own posts --> */}
                         { user?.followingId?.includes(post?.user?._id) ? (
-                            <UnfollowButton userId={post?.user?._id} unfollowUser={unfollowUser} />
+                            <UnfollowButton userId={post?.user?._id} unfollowUser={unfollowUser} containerClassName="w-20 mx-auto" />
                         ) : (
                             user?._id !== post?.user?._id &&
                             <FollowButton userId={post?.user?._id} followUser={followUser} />

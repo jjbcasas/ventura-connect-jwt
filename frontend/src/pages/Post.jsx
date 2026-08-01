@@ -180,6 +180,7 @@ const Post = () => {
                                                     classNameOne='mt-2'
                                                     userId={accountUser?._id}
                                                     unfollowUser={ handleUnfollowUser }
+                                                    containerClassName="w-20 mx-auto"
                                                     />
                                         ):(
                                                     <FollowButton
