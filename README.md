@@ -19,7 +19,7 @@
   I plan to enhance the app by expanding user customization options, enabling cross-user posting, and integrating diverse media types for richer content.
 
 # Lesson Learned
-   Through this project, I gained significant experience developing a React frontend. I focused on component-based architecture, state management, and data fetching from a backend API. I also utilized the Context API to efficiently manage application-wide state.
+   Through this project, I gained significant experience developing a React frontend focused on component-based architecture, state management, and data fetching from a Node.js and Express backend. I utilized the Context API to efficiently manage application-wide state. Additionally, I implemented a tipping feature using Stripe webhooks and built a chat feature powered by WebSockets to enable real-time, two-way communication between users. Finally, I integrated the Cloud Vision API to add an AI/ML component, establishing 24/7 content moderation to maintain the platform's credibility.
 
 # Install dependencies:
   Run the Backend(from the root):<br>
