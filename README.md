@@ -16,19 +16,19 @@
   After building the initial version with a Node.js/Express.js backend and EJS templating, I made the strategic decision to migrate the entire frontend to React. This migration allowed me to rebuild core features to be more dynamic, reusable and modern, leveraging React's component-based architecture and state management capabilities.
 
 # Optimizations
-  I plan to enhance the app by expanding user customization options, enabling cross-user posting, integrating diverse media types for richer content, and adding chat functionality.
+  I plan to enhance the app by expanding user customization options, enabling cross-user posting, and integrating diverse media types for richer content.
 
 # Lesson Learned
-   Through this project, I gained significant experience developing a React frontend. I focused on component-based architecture, state management, and data fetching from a backend API. I also utilized the Context API to efficiently manage application-wide state.
+   Through this project, I gained significant experience developing a React frontend focused on component-based architecture, state management, and data fetching from a Node.js and Express backend. I utilized the Context API to efficiently manage application-wide state. Additionally, I implemented a tipping feature using Stripe webhooks and built a chat feature powered by WebSockets to enable real-time, two-way communication between users. Finally, I integrated the Cloud Vision API to add an AI/ML component, establishing 24/7 content moderation to maintain the platform's credibility.
 
 # Install dependencies:
   Run the Backend(from the root):<br>
     &nbsp;&nbsp; run `npm install` <br>
-    &nbsp;&nbsp; run `npm run dev` <br>
+    &nbsp;&nbsp; run `npm run dev`  or `node server.js` <br>
 Run the frontend:<br>
     &nbsp;&nbsp; `cd frontend` <br>
     &nbsp;&nbsp; run `npm install` <br>
-    &nbsp;&nbsp; run `npm run dev` or `node server.js`
+    &nbsp;&nbsp; run `npm run dev`
 
 # Things to add
   - Create a '.env' file in backend/config folder and add the following `key = value`
@@ -39,6 +39,7 @@ Run the frontend:<br>
     - API SECRET = `your cloudinary api secret`
     - GOOGLE_CLIENT_ID = `your google client id`
     - GOOGLE_CLIENT_SECRET = `your google client secret`
+    - GOOGLE_VISION_API_KEY= `your google cloud vision api key`
     - BACKEND_URL= `your backend port number`
     - NODE_ENV=development
     - ARCJET_KEY=`your arcjet key`
