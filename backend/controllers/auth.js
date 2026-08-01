@@ -7,7 +7,7 @@ dotenv.config({ path: './backend/config/.env'})
 
 // Health Check Controller (UpTimeRobot)
 export const getCheck = ( req, res ) => {
-  res.status(200).send("Server is alive!")
+  return res.status(200).send("Server is alive!")
 }
 
 // This endpoint would primarily be used to check if a user is already authenticated
