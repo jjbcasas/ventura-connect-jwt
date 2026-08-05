@@ -168,8 +168,16 @@ export const handleStripeWebhook = async (req, res) => {
             });
     
             console.log("Tip saved successfully!");
+            return res.status(200).json({ received: true });
         } catch (dbError) {
+            // Handle duplicate key error if concurrent requests bypass findOne
+            if (dbError.code === 11000) {
+                console.log(`Race condition caught: Session ${session.id} already exists.`);
+                return res.status(200).json({ received: true });
+            }
+            
             console.error("Database Error while saving tip:", dbError.message)
+            return res.status(500).json({ message: "Database save failed, retry later" });
         }
     }
 
@@ -186,6 +194,4 @@ export const handleStripeWebhook = async (req, res) => {
     //         console.error("User Update Error:", err.message);
     //     }
     // }
-
-    res.status(200).json({ received: true });
 };
