@@ -194,4 +194,8 @@ export const handleStripeWebhook = async (req, res) => {
     //         console.error("User Update Error:", err.message);
     //     }
     // }
+    
+    //  Anything else gets politely acknowledged and ignored
+    //  When you run stripe listen --forward-to localhost:4000/webhook using the Stripe CLI during development, Stripe forwards EVERY event by default
+    return res.status(200).json({ received: true });
 };
